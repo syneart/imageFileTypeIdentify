@@ -20,7 +20,7 @@ for (( FILE_INDEX=0; FILE_INDEX<${FILE_CNT}; FILE_INDEX++ )); do
     if [[ "${CORRECT_EXT}" != "${FILE_EXT}" ]] ; then
         CORRECT_EXT=`echo ${CORRECT_EXT} | tr '[:upper:]' '[:lower:]'`
         echo RENAME \"${FILE}\" -\> \"${FILE_NAME}.${CORRECT_EXT}\"
-        #mv "${FILE}" "${FILE_NAME}.${CORRECT_EXT}"
+        mv "${FILE}" "${FILE_NAME}.${CORRECT_EXT}"
     fi
 done
 
