@@ -1,12 +1,12 @@
 #!/bin/sh
 #https://www.syneart.com
-#v1.0 (20180324) by Syneart
+#v1.1 (20180324) by Syneart
 shopt -s nocasematch
 
 echo Calculate Files Count ...
 
 IFS=$'\n'
-FILES=($(find $1 -type f -exec echo {} \;))
+FILES=($(find $1 -type f))
 FILE_CNT=${#FILES[@]}
 
 for (( FILE_INDEX=0; FILE_INDEX<${FILE_CNT}; FILE_INDEX++ )); do
@@ -14,7 +14,7 @@ for (( FILE_INDEX=0; FILE_INDEX<${FILE_CNT}; FILE_INDEX++ )); do
     FILE_NAME=${FILE%.[^.]*}
     FILE_EXT=${FILE##*.}
 
-    CORRECT_EXT=`./imageFileTypeIdentify ${FILE} 2>null`
+    CORRECT_EXT=`./imageFileTypeIdentify ${FILE} 2>/dev/null`
     if [ -z "${CORRECT_EXT}" ]; then continue; fi
     echo \($((${FILE_INDEX}+1)) of ${FILE_CNT}\) [${CORRECT_EXT}] \"${FILE}\"
     if [[ "${CORRECT_EXT}" != "${FILE_EXT}" ]] ; then
