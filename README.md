@@ -35,6 +35,10 @@ for example,
 
 ### In Windows
 
+Drag & down your file or folder to the run.bat file.
+
+or 
+
 You can use Windows command line (a.k.a. cmd) , and type (change directory to batch file location)
 
 `./run.bat "<image or folder>"`
