@@ -27,7 +27,7 @@ You can use Terminal , and type (change directory to bash file location)
 for example,
 
 `$ ./imageFileTypeIdentify "example.png"`<br />
-`$ ./imageFileTypeIdentify "C:\example_folder"`
+`$ ./imageFileTypeIdentify "~/example_folder"`
 <br /><br />
 
 
@@ -53,7 +53,7 @@ You can use Terminal , and type (change directory to bash file location)
 for example,
 
 `$ bash ./run.sh "example.png"`<br />
-`$ bash ./run.sh "C:\example_folder"`
+`$ bash ./run.sh "~/example_folder"`
 
 ## License
 
